@@ -1,0 +1,30 @@
+>>> nombre = "Rubén"
+>>> apellidos = "Valls Aparici"
+>>> edad = "28"
+>>> email = "r.vallsaparici@gmail.com"
+>>> telefono = "+34666777888"
+>>> casado = False
+>>> ConHijos = False
+>>> amigos = ["Santi", "Toni", "Aitor", "Jorge", "Rafa", "Pepe", "..."]
+>>> peliculas = {"p1":"TheBatman", "p2":"LeMans66", "p3":"Yo Robot"}
+>>> print(nombre)
+Rubén
+>>> print(apellidos)
+Valls Aparici
+>>> print(edad)
+28
+>>> print(email)
+r.vallsaparici@gmail.com
+>>> print(email)
+r.vallsaparici@gmail.com
+>>> print(telefono)
++34666777888
+>>> print(casado)
+False
+>>> print(ConHijos)
+False
+>>> print(amigos)
+['Santi', 'Toni', 'Aitor', 'Jorge', 'Rafa', 'Pepe', '...']
+>>> print(peliculas)
+{'p1': 'TheBatman', 'p2': 'LeMans66', 'p3': 'Yo Robot'}
+>>>
