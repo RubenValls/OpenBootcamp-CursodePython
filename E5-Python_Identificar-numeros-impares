@@ -1,0 +1,15 @@
+# Ejercicio 5 Python
+
+n1 = input("Introduce el primer numero para conocer los impares entre ellos: ")
+n2 = input("Introduce el segundo numero para conocer los impares entre ellos: ")
+
+if(n1.isnumeric() and n2.isnumeric()):
+    n1 = int(n1)
+    n2 = int(n2)
+    lista_num = []
+    for numero in range (n1,n2):
+        if(numero%2 != 0):
+            lista_num.append(numero)
+    print(lista_num)   
+else:
+    print("Has introducido datos incorrectos.")
