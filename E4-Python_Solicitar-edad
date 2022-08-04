@@ -1,0 +1,12 @@
+# Ejercicio 4 Python
+
+edad = input("Introduce tu edad: ")
+
+if(edad.isnumeric()):
+    edad = int(edad)
+    if edad >= 18:
+        print("Eres mayor de edad.")
+    else:
+        print("Eres menor de edad.")
+else:
+    print("Has introducido datos incorrectos.")
