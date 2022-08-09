@@ -1,0 +1,17 @@
+def esBisiesto(año):
+    if(año<1582):
+        resultado = "El año debe ser mayor o igual a 1582."
+    elif(año%4==0 or año%100==0 and año%400==0):
+        resultado = "El año es bisiesto."
+    else:
+        resultado = "El año no es bisiesto."
+    return resultado
+
+año = input("Introduce un año para saber si es bisiesto: ")
+
+if(año.isnumeric()):
+    año = int(año)
+    resultado = esBisiesto(año)
+    print(resultado)
+else:
+    print("Se ha introducido un dato inválido.")
