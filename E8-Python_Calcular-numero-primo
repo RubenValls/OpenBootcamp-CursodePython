@@ -13,6 +13,10 @@ def esPrimo(numero):
     return resultado
     
 
-numero = int(input("Introduce un número que quieras saber si es primo: "))
-final = esPrimo(numero)
-print(final)
+numero = input("Introduce un número que quieras saber si es primo: ")
+if(numero.isnumeric()):
+    numero = int(numero)
+    final = esPrimo(numero)
+    print(final)
+else:
+    print("No se ha introducido un valor válido")
