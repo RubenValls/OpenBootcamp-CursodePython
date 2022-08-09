@@ -1,0 +1,18 @@
+def esPrimo(numero):
+    resultado = "El número es primo"
+    contador = 2
+    if(numero==1 or numero==2):
+        resultado = "El número es primo"
+    elif(numero==0):
+        resultado = "0 no es un número primo"
+    else:
+        while(contador<numero):
+            if(numero%contador == 0):
+                resultado = "El número no es primo"
+            contador += 1
+    return resultado
+    
+
+numero = int(input("Introduce un número que quieras saber si es primo: "))
+final = esPrimo(numero)
+print(final)
