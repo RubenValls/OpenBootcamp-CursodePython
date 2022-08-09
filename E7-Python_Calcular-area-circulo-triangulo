@@ -1,0 +1,17 @@
+import math
+
+def areaTriangulo(altura,base):
+    resultado = (altura*base)/2
+    return resultado
+
+def areaCirculo(radio):
+    pi = math.pi
+    resultado = pi*(radio*radio)
+    return resultado
+
+res1= areaCirculo(2)
+
+res2= areaTriangulo(3,5)
+
+print("Área del círculo: ",res1)
+print("Área del triángulo: ",res2)
