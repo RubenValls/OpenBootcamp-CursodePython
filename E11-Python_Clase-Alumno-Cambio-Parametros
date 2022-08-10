@@ -1,0 +1,18 @@
+class Alumno:
+    nombre = None
+    nota = None
+
+    def cambiarNombre(self):
+        self.nombre = "Rubén"
+    
+    def cambiarNota(self):
+        self.nota = 7
+
+alumno = Alumno()
+
+print(alumno.nombre, alumno.nota)
+
+alumno.cambiarNombre()
+alumno.cambiarNota()
+
+print(alumno.nombre, alumno.nota)
