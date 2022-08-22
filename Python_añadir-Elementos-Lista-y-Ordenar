@@ -1,0 +1,20 @@
+def checkPais(lista, pais):
+    condicion = True
+    for nombre in lista:
+        if nombre == pais:
+            print("Este país ya ha sido introducido.")
+            condicion = False
+    
+    if condicion == True:
+        lista.append(pais)
+
+listaPaises = []
+contador = 0
+while contador < 5:
+    pais = input("Introduce un país para añadir a la lista: ")
+    checkPais(listaPaises, pais)
+    contador += 1
+
+print(listaPaises)
+listaPaises = sorted(listaPaises)
+print(listaPaises)
