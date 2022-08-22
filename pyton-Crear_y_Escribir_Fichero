@@ -1,0 +1,8 @@
+#Abrir/Crear el fichero
+archivo = open('fichero.txt', 'r')
+archivo.close()
+
+#Escribir en el fichero
+archivo = open('fichero.txt', 'w')
+archivo.write("Escribir en un con Python fichero es sencillo.")
+archivo.close()
