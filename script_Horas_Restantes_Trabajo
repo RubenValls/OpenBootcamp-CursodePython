@@ -1,0 +1,18 @@
+from datetime import datetime
+from operator import truediv
+import time
+
+def main():
+    ahora = datetime.today()
+
+    hora = ahora.strftime("%H")
+    minutos = ahora.strftime("%M")
+    segundos = ahora.strftime("%S")
+
+    if (int(hora) >= 19 and int(minutos)>= 0 and int(segundos) >=0):
+        print("Es el momento de dejar de trabajar, disfruta de tu día.")
+    else:
+        print("Todavía te quedan: ", 19 - int(hora), " horas.", 60 - int(minutos), " minutos", 60 - int(segundos), " segundos")
+
+if __name__ == '__main__':
+    main()
