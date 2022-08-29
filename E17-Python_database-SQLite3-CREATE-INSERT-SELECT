@@ -1,0 +1,64 @@
+import sqlite3
+
+def create_table(cursor):
+    create_table = """ CREATE TABLE Alumnos(id integer PRIMARY KEY, nombre text NOT NULL, apellido text) """
+    cursor.execute(create_table)
+
+def insertar_alumnos(conn, cursor):
+    alumno1 = """ INSERT INTO Alumnos(id, nombre, apellido) VALUES(1,'Raul', 'Pedro')"""
+    cursor.execute(alumno1)
+
+    alumno2 = """ INSERT INTO Alumnos(id, nombre, apellido) VALUES(2,'Enrique', 'Pano')"""
+    cursor.execute(alumno2)
+
+    alumno3 = """ INSERT INTO Alumnos(id, nombre, apellido) VALUES(3,'Raul', 'Solis')"""
+    cursor.execute(alumno3)
+
+    alumno4 = """ INSERT INTO Alumnos(id, nombre, apellido) VALUES(4,'Roberto', 'Piquer')"""
+    cursor.execute(alumno4)
+
+    alumno5 = """ INSERT INTO Alumnos(id, nombre, apellido) VALUES(5,'Ricardo', 'Luis')"""
+    cursor.execute(alumno5)
+
+    alumno6 = """ INSERT INTO Alumnos(id, nombre, apellido) VALUES(6,'Rafael', 'Pedro')"""
+    cursor.execute(alumno6)
+
+    alumno7 = """ INSERT INTO Alumnos(id, nombre, apellido) VALUES(7,'Pedro', 'Pizza')"""
+    cursor.execute(alumno7)
+
+    alumno8 = """ INSERT INTO Alumnos(id, nombre, apellido) VALUES(8,'Raul', 'Porro')"""
+    cursor.execute(alumno8)
+
+    conn.commit()
+
+def mostrar_valores(cursor):
+    cursor.execute('SELECT * FROM Alumnos')
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+
+def busqueda_restringida(cursor):
+    busqueda = "SELECT id, nombre FROM Alumnos WHERE nombre='Raul'"
+    cursor.execute(busqueda)
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+
+conn = sqlite3.connect('mifichero.db')
+cursor = conn.cursor()
+
+# Creación de la tabla
+#create_table(cursor)
+
+# Insertar valores
+#insertar_alumnos(conn, cursor)
+
+# Mostrar valores de la BD
+mostrar_valores(cursor)
+
+# Búsqueda por restricción
+busqueda_restringida(cursor)
+
+
+cursor.close()
+conn.close()
