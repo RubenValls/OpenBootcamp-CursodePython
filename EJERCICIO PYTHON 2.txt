@@ -1,6 +1,0 @@
->>python3
->> cadena = "Hola OpenBootcamp."
->> print(cadena)
->> Hola OpenBootcamp.
->> print(type(cadena))
->> <class 'str'>
